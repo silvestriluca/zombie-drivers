@@ -1,0 +1,12 @@
+#port number that microservice listens to
+port: 3002
+#redis related settings
+# host: hostname:port
+# password: password for AUTH command
+redis:
+  host: "192.168.99.100:6379"
+  password: ""
+#driver-location-service related settings
+# host: hostname:port
+driver-location-service:
+  host: "localhost:3001"

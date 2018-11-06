@@ -1,0 +1,14 @@
+# Private files (not commitable)
+private
+
+# VSCode directory
+.vscode
+
+# VSCode debug artifacts
+*/debug
+debug
+debug.test
+
+# Build execs
+*/*.exe
+*.exe

@@ -1,0 +1,13 @@
+port: 3000
+urls:
+  -
+    path: "/drivers/:id/locations"
+    method: "PATCH"
+    nsq:
+      topic: "locations"
+      nsqdhost: "localhost:4151"
+  -
+    path: "/drivers/:id"
+    method: "GET"
+    http:
+      host: "zombie-driver"

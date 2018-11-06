@@ -1,0 +1,20 @@
+#port number that Gateway listens to
+port: 3000
+#Routes that Gateway manages
+# nsq: Sends the payload (body) to a NSQ.io service
+#   topic: the topic to publish a payload for async processing
+#   nsqdhost: nsqd host:port that listens to HTTP clients
+# http: Forwards the request to an upstream sevice using the same path of the original request
+#   host: upstream service hostname:port (e.g. localhost:9000)
+urls:
+  -
+    path: "/drivers/:id/locations"
+    method: "PATCH"
+    nsq:
+      topic: "locations"
+      nsqdhost: "192.168.99.100:4151"
+  -
+    path: "/drivers/:id"
+    method: "GET"
+    http:
+      host: "localhost:3002"
