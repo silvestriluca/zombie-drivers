@@ -232,7 +232,7 @@ A possible improvement is using the nsq client and its Producer object, which wo
 
 Since the `/drivers/:id/locations` call saves the location informations asyncronously, a preliminary validation on payload (body) is being made and a 400 error is returned if the payload is malformed or lacks informations.
 
-**TESTS** cover most of the code but they rely on working services. An improvement to them could be a full mocking of the other services, but this hasn't been implemented in this initial pull request.
+**TESTS** cover most of the code but they rely on working services. An improvement to them could be a full mocking of the other services, but this hasn't been implemented in this initial commit.
 
 All the codebase (service and tests) is fully commented to be easily readable and self-explaining.
 
